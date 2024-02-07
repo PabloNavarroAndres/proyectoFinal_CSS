@@ -1,1 +1,8 @@
+# Archivos comunes
 /node_modules/
+package.json
+postcss.config.js
+.stylelintrc.json
+# Proyecto normal:
+# /Proyecto/src/
+# /Proyecto_AAA/src/
