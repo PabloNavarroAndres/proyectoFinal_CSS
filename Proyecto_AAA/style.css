@@ -1,7 +1,7 @@
 :root {
   --fondo-oscuro: rgb(33 33 33);
-  --color-parrafo: gray;
-  --color-boton: #e55848;
+  --color-parrafo: rgb(80 79 79);
+  --color-boton: #a71100;
   --texto-enlace: 0.75rem;
   --texto-parrafo: 0.813rem;
   --texto-titular: 0.875rem;
@@ -43,7 +43,7 @@
   color: white;
 }
 
-.invisible-title {
+.invisible-title, .invisible-submit {
   display: none;
 }
 
@@ -508,7 +508,7 @@ header section {
 
 .bestprod-price span, .collection-info span {
   text-decoration-line: line-through;
-  color: gray;
+  color: var(--color-parrafo);
   padding-left: 10px;
 }
 
@@ -902,10 +902,26 @@ video {
 
 iframe {
   width: 50%;
+  border: 0;
 }
 
 audio {
   width: 50%;
+  color: white;
+}
+
+#skip-link {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background-color: var(--fondo-oscuro);
+  z-index: 999;
+  transform: scaleY(-1);
+  transition: top 0.3s ease;
+}
+
+#skip-link:hover, #skip-link:focus {
+  top: 0;
 }
 
 /* Media query para tablets */
@@ -1156,6 +1172,11 @@ audio {
   iframe {
     width: 80%;
     height: 265px;
+  }
+
+  #skip-link img {
+    width: 35px;
+    height: 35px;
   }
 
 }
