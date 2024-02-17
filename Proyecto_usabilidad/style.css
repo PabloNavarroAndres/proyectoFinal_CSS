@@ -899,6 +899,7 @@ mostrando solo la seleccionada (Women's Fashion) */
 
 video {
   flex: 1;
+  width: 100%;
 }
 
 #video-placeholder {
@@ -929,6 +930,10 @@ audio {
 
 #skip-link:hover, #skip-link:focus {
   top: 0;
+}
+
+#skip-link img {
+  filter: invert();
 }
 
 /* Media query para tablets */
