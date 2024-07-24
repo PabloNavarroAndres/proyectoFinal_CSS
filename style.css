@@ -55,6 +55,22 @@ body {
   font-family: Arial, sans-serif;
 }
 
+main {
+  position: relative;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 main, .footer-content {
   display: flex;
   margin: auto;
@@ -223,6 +239,7 @@ header section {
 .preferences-content {
   display: flex;
   align-items: center;
+  gap: 50px;
 }
 
 .page-preferences {
@@ -699,6 +716,7 @@ mostrando solo la seleccionada (Women's Fashion) */
 
 .collection-buttons a:nth-child(2) img {
   filter: invert();
+  height: 100%;
 }
 
 .women-new-collections article:hover .collection-buttons {
@@ -761,6 +779,7 @@ mostrando solo la seleccionada (Women's Fashion) */
 
 .women-new-collections .fav-img {
   position: absolute;
+  cursor: pointer;
   width: 15px;
   right: 0;
 }
@@ -792,6 +811,7 @@ mostrando solo la seleccionada (Women's Fashion) */
 .payment-section {
   display: flex;
   flex-direction: column;
+  align-self: start;
   align-items: center;
   text-align: center;
   flex: 1;
@@ -826,7 +846,7 @@ mostrando solo la seleccionada (Women's Fashion) */
 .footer-sections h2 {
   font-size: 1.25rem;
   margin: 0;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .footer-info {
@@ -942,8 +962,7 @@ audio {
   filter: invert();
 }
 
-/* Media query para tablets */
-@media (width <= 1200px)  {
+@media (width <= 1225px)  {
   :root {
     --ancho-secciones: 80%;
     --texto-enlace: 0.75rem;
@@ -1074,16 +1093,224 @@ audio {
     flex: 1;
   }
 
+  .footer-sections h2 {
+    padding-top: 0;
+  }
+
+  .footer-sections > section {
+    padding: 25px 15px;
+  }
+
 }
 
-/* Media query para móviles */
-@media (width <= 700px) {
+@media (width <= 850px)  {
+  :root {
+    --ancho-secciones: 88%;
+    --titulo-seccion: 1.5rem;
+    --texto-titular: 0.75rem;
+    --texto-parrafo: 0.6rem;
+    --texto-enlace: 0.55rem;
+  }
+
+  .preferences-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .page-preferences {
+    display: flex;
+    flex: 1;
+    text-align: center;
+  }
+
+  audio {
+    color: white;
+    flex: 1;
+    height: 30px;
+  }
+
+  .user-preferences {
+    display: flex;
+    justify-content: center;
+  }
+
+  .women-collection-content h2 {
+    width: 100%;
+    padding: 0;
+    font-size: 2.2rem;
+    padding-bottom: 15px;
+  }
+
+  .logo-volupa img {
+    width: 60%;
+  }
+
+  .women-collection-content a {
+    padding: 12px 25px;
+  }
+
+  .main-nav ul {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 0.4fr);
+  }
+
+  .logo-volupa {
+    width: 65%;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .logo-volupa img {
+    width: 50%;
+  }
+
+  .nav-content {
+    flex-direction: column;
+  }
+
+  .women-collection-content div {
+    font-size: 0.8rem;
+  }
+
+  .main-nav {
+    margin-bottom: -65px;
+  }
+
+  .main-nav ul {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 0.4fr);
+  }
+
+  .main-nav-content h2 {
+    font-size: 0.8rem;
+  }
+
+  .info-bestprod a {
+    position: unset;
+    align-self: unset;
+  }
+
+  .articles-container article:nth-child(2) {
+    display: none; 
+  }
+
+  .deals-week-content {
+    top: 45%;
+  }
+
+  .deals-week-content a {
+    padding: 10px 15px;
+  }
+
+  .deals-week-content div:nth-child(1) {
+    gap: 10px;
+  }
+
+  .subscription-info > div {
+    font-size: 1.5rem;
+  }
+
+  .payment-section img {
+    width: 15%;
+  }
+
+  .direct-contact div {
+    padding-right: 25px;
+  }
+
+  .deals-week img {
+    height: 65vw;
+  }
+
+  .cronometer section {
+    padding: 10px 3px;
+  }
+
+  .cronometer section span {
+    font-size: 0.9rem;
+  }
+
+  .subscription {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .email {
+    padding: 10px;
+  }
+
+  .submit {
+    padding: 10px;
+
+    background-color: var(--color-boton);
+    color: white;
+    cursor: pointer;
+  }
+
+  .subscription-info > div {
+    font-size: 1.2rem;
+  }
+
+  .subscription-info h2 {
+    font-size: var(--texto-titular);
+  }
+
+  .menu-collections {
+    width: 100%;
+  }
+
+  .new-collections-content {
+    width: 90%;
+  }
+
+  .collection-rating {
+    position: unset;
+    align-self: flex-start;
+  }
+
+  .payment-section {
+    padding: 20px;
+  }
+
+  .footer-sections {
+    flex-wrap: wrap;
+    gap: unset;
+  }
+
+  .footer-info, .footer-contact {
+    width: 50%;
+    flex: unset;
+  }
+
+  .footer-payments ul {
+    width: unset;
+  }
+
+  .footer-payments li {
+    flex: 0.15;
+  }
+
+  .footer-social ul {
+    width: unset;
+  }
+
+  .footer-social li {
+    flex: 0.06;
+  }
+
+  .footer-links, .footer-account {
+    flex: 1;
+  }
+
+}
+
+@media (width <= 480px) {
   :root {
     --ancho-secciones: 90%;
-    --texto-enlace: 0.65rem;
-    --texto-parrafo: 0.75rem;
-    --texto-titular: 0.8rem;
-    --titulo-seccion: 1.75rem;
   }
 
   .back-top {
@@ -1096,26 +1323,19 @@ audio {
   }
 
   .user-preferences ul {
-    gap: 10px;
+    gap: 30px;
   }
 
-  .women-collection-content a {
-    padding: 10px 20px;
+  .women-collection-content {
+    top: 20%;
   }
 
   .women-collection-content h2 {
-    font-size: 2.6rem;
-    width: 80%;
-    padding-bottom: 10px;
-    padding-top: 0;
-  }
-  
-  .women-collection-content {
-    top: 30%;
+    font-size: 1.75rem;
   }
 
   .main-nav ul {
-    grid-template-rows: repeat(2, 0.3fr); 
+    grid-template-rows: repeat(2, 0.46fr); 
     grid-template-columns: repeat(2, 1fr); 
     padding: 20px;
     justify-content: center; 
@@ -1139,16 +1359,16 @@ audio {
     font-size: 0.65rem;
   }
 
-  .articles-container article:nth-child(2) {
-    display: none; 
-  }
-
   .deals-week-content {
     top: 40%; 
   }
 
   .subscription-info > div {
     font-size: 1.4rem; 
+  }
+
+  .payment-section img {
+    width: 25%;
   }
 
   .direct-contact div {

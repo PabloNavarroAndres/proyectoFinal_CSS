@@ -4,8 +4,3 @@ package.json
 package-lock.json
 postcss.config.js
 .stylelintrc.json
-
-# Proyecto normal:
-/Proyecto/src/
-/Proyecto_AAA/src/
-/Proyecto_usabilidad/src/
