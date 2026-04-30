@@ -481,7 +481,7 @@ header section {
 }
 
 .footer-info > img {
-  width: 50%;
+  width: 23%;
 }
 
 .footer-info p {
@@ -1158,7 +1158,7 @@ audio {
   }
 
   .logo-volupa {
-    width: 65%;
+    width: 25%;
     align-self: center;
     justify-content: center;
   }
@@ -1327,17 +1327,23 @@ audio {
   }
 
   .women-collection-content {
-    top: 20%;
+    top: 33%;
   }
 
   .women-collection-content h2 {
     font-size: 1.75rem;
   }
 
+  .main-nav {
+    margin-bottom: -145px;
+  }
+
   .main-nav ul {
     grid-template-rows: repeat(2, 0.46fr); 
     grid-template-columns: repeat(2, 1fr); 
-    padding: 20px;
+    padding: 10px;
+    margin-top: 110px;
+    gap: 10px;
     justify-content: center; 
   }
   
@@ -1361,14 +1367,34 @@ audio {
 
   .deals-week-content {
     top: 40%; 
+    width: 50%;
+    left: 30%;
+  }
+
+  .deals-week-content a {
+    width: 40%;
   }
 
   .subscription-info > div {
     font-size: 1.4rem; 
   }
 
+  .payment-info {
+    width: 95%;
+  }
+
+  .payment-section {
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   .payment-section img {
     width: 25%;
+  }
+
+  .payment-section h3 {
+    font-size: 1rem;
   }
 
   .direct-contact div {
@@ -1398,18 +1424,13 @@ audio {
     padding-bottom: 100%; 
   }
 
-  .videos-container {
-    flex-direction: column;
-    align-items: center;
+  .footer-social ul {
+    width: 300px;
   }
 
-  video {
-    width: 100%;
+  .footer-payments ul {
+    width: 225px;
   }
-
-  #skip-link img {
-    width: 35px;
-    height: 35px;
-  }
-
 }
+
+
