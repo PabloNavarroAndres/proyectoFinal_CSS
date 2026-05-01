@@ -1,6 +1,30 @@
-function loadVideo() {
-    let placeholder = document.getElementById('video-placeholder');
+// Hamburger Menu Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const preferencesContent = document.getElementById('preferences-content');
 
-    // Reemplazo el iframe fachada con el real
-    placeholder.innerHTML = '<iframe src="https://www.youtube.com/embed/-oL60bSwOA4?si=JNSxcODbbhl8M9CH&autoplay=1" title="The importance of Fashion in Society (Yt video)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-}
+    if (hamburgerMenu && preferencesContent) {
+        hamburgerMenu.addEventListener('click', function() {
+            hamburgerMenu.classList.toggle('active');
+            preferencesContent.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const links = preferencesContent.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerMenu.classList.remove('active');
+                preferencesContent.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.preferences')) {
+                hamburgerMenu.classList.remove('active');
+                preferencesContent.classList.remove('active');
+            }
+        });
+    }
+});
+
